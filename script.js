@@ -16,3 +16,21 @@ document.querySelectorAll(".reveal").forEach((element, index) => {
 });
 
 document.getElementById("year").textContent = new Date().getFullYear();
+
+const lightbox = document.querySelector(".lightbox");
+const lightboxImage = lightbox.querySelector("img");
+const lightboxTitle = lightbox.querySelector("p");
+
+document.querySelectorAll(".gallery-button").forEach((button) => {
+  button.addEventListener("click", () => {
+    lightboxImage.src = button.dataset.full;
+    lightboxImage.alt = button.querySelector("img").alt;
+    lightboxTitle.textContent = button.dataset.title;
+    lightbox.showModal();
+  });
+});
+
+lightbox.querySelector(".lightbox-close").addEventListener("click", () => lightbox.close());
+lightbox.addEventListener("click", (event) => {
+  if (event.target === lightbox) lightbox.close();
+});
