@@ -25,7 +25,10 @@ document.querySelectorAll(".gallery-button").forEach((button) => {
   button.addEventListener("click", () => {
     lightboxImage.src = button.dataset.full;
     lightboxImage.alt = button.querySelector("img").alt;
-    lightboxTitle.textContent = button.dataset.title;
+    const description = button.closest("figure").querySelector(".art-description")?.textContent;
+    lightboxTitle.textContent = description
+      ? `${button.dataset.title} — ${description}`
+      : button.dataset.title;
     lightbox.showModal();
   });
 });
