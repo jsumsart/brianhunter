@@ -120,7 +120,7 @@ h2 em { font-family: "Italianno", cursive; font-weight: 400; color: #85629b; }
 .portrait-frame::before, .portrait-frame::after { content: "✦"; position: absolute; color: var(--gold); font-size: 2rem; background: var(--plum); padding: .4rem; }
 .portrait-frame::before { top: -1.4rem; left: 50%; transform: translateX(-50%); }
 .portrait-frame::after { bottom: -1.4rem; left: 50%; transform: translateX(-50%); }
-.portrait-placeholder { min-height: 570px; border-radius: 48% 48% 5px 5px; display: grid; place-items: center; text-align: center; text-transform: uppercase; letter-spacing: .2em; font-size: .7rem; color: rgba(245,237,223,.7); background: linear-gradient(160deg, #b392c7, #6d4b7d 55%, #26192e); }
+.artist-portrait { width: 100%; min-height: 570px; aspect-ratio: 4 / 5; border-radius: 48% 48% 5px 5px; object-fit: cover; object-position: 50% 35%; background: #064c3f; }
 .about-copy { max-width: 600px; position: relative; z-index: 1; }
 .about-copy p:not(.kicker) { color: #d7c7da; line-height: 1.9; font-size: .9rem; max-width: 34rem; }
 .drop-cap::first-letter { float: left; margin: .05em .12em 0 0; font: 4.3rem/.75 "Italiana", serif; color: var(--lavender); }
@@ -163,7 +163,7 @@ footer p:last-child { justify-self: end; }
   .gallery { columns: 1; max-width: 480px; }
   .art-card { margin-bottom: 4rem; }
   .about { grid-template-columns: 1fr; gap: 5rem; padding-inline: 7vw; }
-  .portrait-placeholder { min-height: 430px; }
+  .artist-portrait { min-height: 430px; }
   footer { grid-template-columns: 1fr; text-align: center; }
   footer .monogram, footer p:last-child { justify-self: center; }
 }
