@@ -1,6 +1,6 @@
 # Brian Hunter — Artist Portfolio
 
-A static portfolio site for Jackson, Mississippi artist Brian Hunter.
+A static portfolio site for Jackson, Mississippi artist, curator, and museum professional Brian Hunter.
 
 ## Before the public launch
 
